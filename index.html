@@ -8,9 +8,8 @@
 
   <body>
     <div id="app">
-      <p>{{ message }}</p>
-      <p>{{ count }}回クリックしたよ</p>
-      <button v-on:click="increment">aaaaa</button>
+      <p v-bind:class="{ child: isChild, 'is-active': isActive}">text</p>
+      <p v-bind:style="{ color:textColor, backgroundColor: bgColor}">text</p>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>

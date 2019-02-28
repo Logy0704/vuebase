@@ -2,11 +2,9 @@ var state = { count: 0 };
 var app = new Vue({
   el: '#app',
   data: {
-    count: 0
-  },
-  methods: {
-    increment: function() {
-      this.count += 1;
-    }
+    isChild: true,
+    isActive: true,
+    textColor: 'red',
+    bgColor: 'lightgray'
   }
 });
