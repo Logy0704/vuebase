@@ -9,9 +9,8 @@
   <body>
     <div id="app">
       <p>{{ message }}</p>
-      <div v-bind:text-content.prop="message"></div>
-      <div v-bind:scroll-top.prop="scroll"></div>
-      <input type="text" v-bind:value="message.value" />
+      <p>{{ count }}回クリックしたよ</p>
+      <button v-on:click="increment">aaaaa</button>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>

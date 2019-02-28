@@ -7,8 +7,9 @@ var app = new Vue({
       scroll: 0
     }
   },
-  mounted: function() {
-    this.scroll = 100;
+  methods: {
+    increment: function() {
+      this.count += 1;
+    }
   }
 });
-state.count++;
