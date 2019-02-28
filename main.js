@@ -2,9 +2,13 @@ var state = { count: 0 };
 var app = new Vue({
   el: '#app',
   data: {
-    isChild: true,
-    isActive: true,
-    textColor: 'red',
-    bgColor: 'lightgray'
+    classObject: {
+      isChild: true,
+      isActive: true
+    },
+    styleObject: {
+      color: 'red',
+      backgroundColor: 'lightgray'
+    }
   }
 });
