@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="app">
+      <p>{{ message }}</p>
+      <div v-bind:text-content.prop="message"></div>
+      <div v-bind:scroll-top.prop="scroll"></div>
+      <input type="text" v-bind:value="message.value" />
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="main.js"></script>
+</html>
