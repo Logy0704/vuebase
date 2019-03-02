@@ -12,12 +12,13 @@
       <button v-on:click="doAdd">add</button>
       <ui>
         <li
-          v-for="item in list"
+          v-for="(item,index) in list"
           v-bind:key="item.id"
           v-bind:class="{ tuyoi: item.hp > 300 }"
         >
           ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-          <span v-if="item.hp > 300">aaaa </span>
+          <button v-on:click="doAttack(index)">attack</button>
+          <button v-on:click="doRemove(index)">remove</button>
         </li>
       </ui>
     </div>

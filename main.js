@@ -2,11 +2,19 @@ var state = { count: 0 };
 var app = new Vue({
   el: '#app',
   data: {
-    list: [
-      { id: 1, name: 'aa', hp: 100 },
-      { id: 2, name: 'ab', hp: 200 },
-      { id: 3, name: 'bb', hp: 301 }
-    ]
+    list: []
+  },
+  created: function() {
+    axios
+      .get('list.json')
+      .then(
+        function(response) {
+          this.list = response.data;
+        }.bind(this)
+      )
+      .catch(function(e) {
+        console.error(e);
+      });
   },
   methods: {
     doAdd: function() {
@@ -19,6 +27,14 @@ var app = new Vue({
         name: this.name,
         hp: 500
       });
+    },
+
+    doRemove: function(index) {
+      this.list.splice(index, 1);
+    },
+
+    doAttack: function(index) {
+      this.list[index].hp -= 10;
     }
   }
 });
