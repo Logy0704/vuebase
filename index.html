@@ -8,9 +8,16 @@
 
   <body>
     <div id="app">
+      <input v-model="name" />
+      <button v-on:click="doAdd">add</button>
       <ui>
-        <li v-for="item in list" v-bind:key="item.id">
+        <li
+          v-for="item in list"
+          v-bind:key="item.id"
+          v-bind:class="{ tuyoi: item.hp > 300 }"
+        >
           ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+          <span v-if="item.hp > 300">aaaa </span>
         </li>
       </ui>
     </div>
