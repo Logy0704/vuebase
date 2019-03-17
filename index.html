@@ -8,15 +8,9 @@
 
 <body>
   <div id="app">
-    <ul>
-      <li v-for="value in user">{{ value }}</li>
-    </ul>
-    <hr>
-    <ul>
-      <li v-for="(value, key) in user">
-        {{ key }} : {{ value }}
-      </li>
-    </ul>
+    <input type="text" v-model="message">
+
+    <input type="text" v-model="message">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
