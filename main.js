@@ -5,17 +5,16 @@ Vue.filter('readMore', function (text, length, suffix) {
 var app = new Vue({
   el: '#app',
   data: {
-    message: '    Lorem ipsu variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets.It was introduced to the Information Age in the mid - 1980s by Aldus Corporation, which employed it in graphics and word - processing templates for its desktop publishing program PageMaker.Many popular Word Processors use this format as a placeholder.Some examples are Pages or Microsoft Word.'
+    basePrice: 100
   },
   computed: {
-    reversedMessage: function () {
-      return this.message.split('').reverse().join('')
-    }
-  },
-  methods: {
-    reversedMessageMethod: function () {
-      return this.message.split('').reverse().join('')
+    taxIncludedPrice: {
+      get: function () {
+        return parseInt(this.basePrice * 1.08)
+      },
+      set: function (taxIncludedPrice) {
+        this.basePrice = Math.ceil(taxIncludedPrice / 1.08)
+      }
     }
   }
-
 })

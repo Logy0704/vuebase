@@ -10,11 +10,10 @@
 <body>
   <div id="app">
     <p>
-      {{ reversedMessage }}
+      base price: <input type="text" v-model="basePrice">
     </p>
-
     <p>
-      {{ reversedMessageMethod() }}
+      tax included price: <input type="text" v-model="taxIncludedPrice">
     </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
