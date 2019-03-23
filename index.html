@@ -12,7 +12,15 @@
     <p>
       {{ message }}
     </p>
-    <p v-text="message"></p>
+    <p>
+      {{ number + 1 }}
+    </p>
+    <p>
+      {{ message.split('').reverse().join('') }}
+    </p>
+    <p>
+      {{ boolean ? 'YES' : 'NO' }}
+    </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
