@@ -1,11 +1,15 @@
+Vue.filter('toUSD', function (jpy) {
+  return jpy / 100
+})
+
 Vue.filter('numberFormat', function (value) {
   return value.toLocaleString()
 })
 var app = new Vue({
   el: '#app',
   data: {
-    price: 29800
-  },
+    jpyPrice: 29800000000000
+  }
   // filters: {
   //   numberFormat: function (value) {
   //     return value.toLocaleString()
