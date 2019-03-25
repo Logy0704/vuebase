@@ -9,18 +9,11 @@
 
 <body>
   <div id="app">
-    <p v-if="color === 'red'">
-      Stop
+    <p>
+
+      {{ counter }}
     </p>
-    <p v-else-if="color === 'yellow'">
-      Caution
-    </p>
-    <p v-else-if="color === 'blue'">
-      Go
-    </p>
-    <p v-else>
-      Not red/yellow/blue
-    </p>
+    <button v-on:click="clickHandler">click</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>

@@ -2,6 +2,12 @@
 var app = new Vue({
   el: '#app',
   data: {
-    color: 'bluedd'
+    counter: 0
+  },
+  methods: {
+    clickHandler: function (event) {
+      this.counter++
+      console.log(event)
+    }
   }
 })
