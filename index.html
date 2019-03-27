@@ -9,7 +9,8 @@
 
 <body>
   <div id="app">
-    <input type="text" v-on:keyup.27="clear" v-model="message">
+    <input type="checkbox" id="checkbox" v-model="checked">
+    <label for="checkbox">{{ checked }}</label>
     <p>
 
       {{ message }}
