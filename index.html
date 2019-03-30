@@ -9,13 +9,9 @@
 
 <body>
   <div id="app">
-    <p>
-      <input type="text" v-model.trim="message">
-    </p>
-    <p>
-      <input type="text" v-model="message">
-    </p>
-    <pre>{{ $data }}</pre>
+    <hello-component></hello-component>
+    <hello-component></hello-component>
+    <hello-component></hello-component>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
